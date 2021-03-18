@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <title>Dolarungo</title>
+
+    <style>
+        body{
+            background: #2B303A;
+        }
+
+        h1,h3{
+            font-family: 'Bangers', cursive;
+            color: azure;
+        }
+        .center{
+            text-align: center;
+        }
+
+        .row{
+            padding-top: 50px;
+        }  
+    </style>
+
+</head>
+<body>
+    <div class="container"> 
+        <div class="row">
+            <div class="col-12">
+                <h1 class="center">
+                    Dolarungo
+                </h1>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-4 center">
+                <img src="{{ url_for('static', filename = 'img/benjaa.png')}}" alt="" class="img-fluid">
+                <div class="row">
+                    <h3>Dólar Blue</h3>
+                    <h3>Dólar Oficial</h3>
+                    <h3>Dólar Bolsa</h3>
+                    <h3>Dólar Contado con Liquidación</h3>
+                </div>
+            </div>
+            <div class="col-3 center"><img src="{{ url_for('static', filename = 'img/julioo.png')}}" alt="" class="img-fluid">
+                <div class="row">
+                    <h3>Precio compra: {{valor_DB_compra}} ---- Precio venta: {{valor_DB_venta}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
